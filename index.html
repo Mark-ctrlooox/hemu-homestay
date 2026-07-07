@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>默默禾你 · 诺瓦木屋 &amp; 禾木溪闻民宿 | 新疆禾木村</title>
+<meta name="description" content="禾木诺瓦木屋与禾木溪闻民宿，位于新疆阿勒泰禾木村。独栋木屋院落，推门见雪山白桦，枕溪而居。携程4.5分，在线预订。">
+<meta property="og:title" content="默默禾你 · 诺瓦木屋 &amp; 禾木溪闻民宿">
+<meta property="og:description" content="推开禾木木屋的门——外面是雪山白桦，里面是炉火温暖。">
+<meta property="og:image" content="assets/images/hemu_aerial_3.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='5' width='24' height='22' rx='4' fill='%23F5EDE0' stroke='%23C47E3B' stroke-width='1.5'/><rect x='4' y='5' width='24' height='4' rx='2' fill='%23E8CDA0'/><text x='16' y='23' text-anchor='middle' font-size='10' fill='%238B5A2B' font-family='serif'>桦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="默默禾你首页">
+      <svg class="nav-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="8" width="28" height="26" rx="4" fill="#F5EDE0" stroke="#C47E3B" stroke-width="1.5"/>
+        <rect x="6" y="8" width="28" height="4" rx="2" fill="#E8CDA0"/>
+        <line x1="9" y1="16" x2="12" y2="16" stroke="#8B5A2B" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+        <line x1="9" y1="20" x2="14" y2="20" stroke="#8B5A2B" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+        <line x1="9" y1="24" x2="11" y2="24" stroke="#8B5A2B" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+        <circle cx="18" cy="23" r="1.2" fill="#6B5540" opacity="0.5"/>
+        <circle cx="24" cy="21" r="1" fill="#6B5540" opacity="0.4"/>
+        <circle cx="20" cy="27" r="0.8" fill="#6B5540" opacity="0.35"/>
+        <path d="M10 30 L16 28 L30 30 L28 34 L15 33 L10 30Z" fill="#E8CDA0" opacity="0.5"/>
+        <text x="20" y="33" text-anchor="middle" font-size="5" fill="#8B5A2B" opacity="0.4" font-family="serif">桦</text>
+      </svg>
+      <span class="nav-logo"><em>默默</em>禾你</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#nuowa">诺瓦木屋</a></li>
+      <li><a href="#xiwen">溪闻民宿</a></li>
+      <li><a href="#spots">打卡禾木</a></li>
+      <li><a href="#vlog">旅者影像</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ul>
+    <!-- 汉堡按钮 -->
+    <button class="hamburger" id="hamburger" aria-label="菜单" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<!-- 移动端菜单覆盖层 -->
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="#nuowa">诺瓦木屋</a></li>
+    <li><a href="#xiwen">溪闻民宿</a></li>
+    <li><a href="#spots">打卡禾木</a></li>
+    <li><a href="#vlog">旅者影像</a></li>
+    <li><a href="#contact">联系</a></li>
+  </ul>
+</div>
+
+<!-- ====== HERO — 推门动画 ====== -->
+<section class="hero" id="hero">
+  <div class="hero-outside" style="background-image:url('assets/images/hemu_winter_4.png')"></div>
+  <div class="hero-inside"></div>
+  <div class="hero-warmglow"></div>
+
+  <div class="door door-left" id="doorLeft">
+    <div class="door-grain"></div>
+    <div class="door-plank"></div><div class="door-plank"></div><div class="door-plank"></div>
+    <div class="door-handle"></div>
+  </div>
+  <div class="door door-right" id="doorRight">
+    <div class="door-grain"></div>
+    <div class="door-plank"></div><div class="door-plank"></div><div class="door-plank"></div>
+    <div class="door-handle"></div>
+  </div>
+
+  <div class="door-crack" id="doorCrack"></div>
+
+  <div class="hero-inner" id="heroInner">
+    <h1 class="hero-title"><span class="gold">默默</span>禾你</h1>
+    <p class="hero-sub">诺瓦木屋 <span class="dot"></span> 禾木溪闻民宿</p>
+    <p class="hero-loc">新疆阿勒泰 · 禾木村</p>
+    <div class="hero-btns">
+      <a href="#nuowa" class="btn btn-fill">推开木屋</a>
+      <a href="#spots" class="btn btn-out">打卡禾木</a>
+    </div>
+  </div>
+
+  <div class="hero-arrow">⌄</div>
+  <div class="danmaku-layer" id="danmaku" aria-hidden="true"></div>
+</section>
+
+<!-- ====== 诺瓦木屋 ====== -->
+<section class="story" id="nuowa">
+  <div class="story-row">
+    <div class="story-pic" style="background-image:url('assets/images/nuowa.jpg')">
+      <div class="story-pic-inset" style="background-image:url('assets/images/nuowa_room.jpg')" title="房间内景"></div>
+    </div>
+    <div class="story-txt">
+      <span class="badge badge-warm">禾木老村 · 禾木桥旁</span>
+      <div class="rating-row">
+        <span class="rating-score">4.5</span>
+        <span class="rating-stars">★★★★★</span>
+        <span class="rating-count">313 条携程点评</span>
+      </div>
+      <h2>诺瓦木屋</h2>
+      <p class="quote">禾木桥边，一院木屋</p>
+      <p class="desc">坐落禾木老村禾木桥边，独门独院木屋院落。推门即禾木河潺潺水声，步行几分钟到桥头晨雾观景台。保留图瓦人传统全木结构，冬有地暖，秋日院子被白桦落叶铺满。</p>
+      <div class="tags-row">
+        <span>🐕 宠物友好</span><span>☕ 咖啡机</span><span>🏡 独栋别墅</span><span>🏔️ 雪山景</span>
+      </div>
+      <div class="meta">
+        <div><label>位置</label><span>老村 · 禾木桥旁</span></div>
+        <div><label>设施</label><span>地暖 · 全木结构</span></div>
+        <a href="https://m.ctrip.com/html5/hotel/hoteldetail/44221205.html" target="_blank" class="btn-book">
+          携程预订 <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 色温过渡带 ====== -->
+<div class="season-bridge" aria-hidden="true">
+  <div class="bridge-leaf" style="left:5%">🍂</div>
+  <div class="bridge-leaf" style="left:25%;animation-delay:3s">🍂</div>
+  <div class="bridge-leaf" style="left:55%;animation-delay:1.5s">🍁</div>
+  <div class="bridge-leaf" style="left:75%;animation-delay:4s">🍂</div>
+  <div class="bridge-leaf" style="left:90%;animation-delay:2s">🍁</div>
+  <div class="bridge-flake" style="left:15%;animation-delay:5s">❄️</div>
+  <div class="bridge-flake" style="left:45%;animation-delay:3.5s">❄️</div>
+  <div class="bridge-flake" style="left:65%;animation-delay:6s">❄️</div>
+  <div class="bridge-flake" style="left:85%;animation-delay:4.5s">❄️</div>
+</div>
+
+<!-- ====== 溪闻民宿 — 差异化布局 ====== -->
+<section class="story alt" id="xiwen">
+  <div class="story-row xiwen-layout">
+    <div class="xiwen-hero">
+      <div class="xiwen-pic-main" style="background-image:url('assets/images/xiwen.jpg')"></div>
+      <div class="xiwen-pics">
+        <div style="background-image:url('assets/images/xiwen_room.jpg')"></div>
+        <div style="background-image:url('assets/images/xiwenxiaotu2.webp')"></div>
+      </div>
+    </div>
+    <div class="story-txt">
+      <span class="badge badge-cool">禾木新村 · 溪水畔</span>
+      <div class="rating-row">
+        <span class="rating-score">4.5</span>
+        <span class="rating-stars">★★★★★</span>
+        <span class="rating-count">携程舒适型酒店</span>
+      </div>
+      <h2>禾木溪闻民宿</h2>
+      <p class="quote">枕溪而居，静听林语</p>
+      <p class="desc">藏身禾木新村山溪旁，得名「枕溪而闻」。木屋依溪而建，夜伴水声入眠，晨在白桦光影中醒来。冬日推窗皑皑白雪覆屋顶，炊烟袅袅。</p>
+      <div class="tags-row">
+        <span>🌊 山溪畔</span><span>🛖 原木屋</span><span>❄️ 雪景观</span><span>🌲 白桦林</span>
+      </div>
+      <div class="meta">
+        <div><label>位置</label><span>新村 · 溪水畔</span></div>
+        <div><label>设施</label><span>地暖 · 观景窗</span></div>
+        <a href="https://m.ctrip.com/html5/hotel/hoteldetail/126301121.html" target="_blank" class="btn-book btn-book-alt">
+          携程预订 <span class="btn-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 打卡禾木 ====== -->
+<section class="spots" id="spots">
+  <h2 class="s-head">打卡禾木</h2>
+  <p class="s-sub">四时之景不同，每一处都值得停留</p>
+  <div class="bento">
+    <div class="bento-card tall">
+      <div class="bento-img" style="background-image:url('assets/images/hemu_aerial_3.jpg')"></div>
+      <div class="bento-body">
+        <span class="bento-tag">摄影圣地</span>
+        <h3>禾木桥</h3>
+        <p>禾木村标志性木桥，晨雾弥漫时如仙境。日出前后是最佳拍摄时刻，桥下禾木河奔流不息。</p>
+      </div>
+    </div>
+    <div class="bento-card">
+      <div class="bento-icon">🎿</div>
+      <div class="bento-body">
+        <span class="bento-tag">冬季必去</span>
+        <h3>吉克普林滑雪场</h3>
+        <p>亚洲最大滑雪场之一，天然粉雪与超长雪道。11月到次年4月，野雪天堂。</p>
+      </div>
+    </div>
+    <div class="bento-card">
+      <div class="bento-icon">🏗️</div>
+      <div class="bento-body">
+        <span class="bento-tag">历史印记</span>
+        <h3>援疆桥</h3>
+        <p>连接老村与新村的历史桥梁，俯瞰禾木河峡谷壮丽秋色。</p>
+      </div>
+    </div>
+    <div class="bento-card wide">
+      <div class="bento-img" style="background-image:url('assets/images/hemu_6.jpeg')"></div>
+      <div class="bento-body">
+        <span class="bento-tag">手工艺品</span>
+        <h3>白桦手礼</h3>
+        <p>禾木本土手工艺品牌，用白桦树皮手工制作灯罩、杯垫、挂饰、书签。每一件作品都保留了白桦树天然的纹理与温度，把禾木的白桦林带回家。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 旅者影像 ====== -->
+<section class="vlog" id="vlog">
+  <h2 class="s-head">旅者影像</h2>
+  <p class="s-sub">用镜头记录禾木的四季</p>
+  <div class="vlog-card">
+    <div class="vlog-av">
+      <img src="assets/images/avatar.jpg" alt="禾木赵默默" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <circle cx="32" cy="24" r="16" fill="#E8CDA0" stroke="#C47E3B" stroke-width="1.5"/>
+        <ellipse cx="32" cy="52" rx="22" ry="12" fill="#E8CDA0" stroke="#C47E3B" stroke-width="1.5"/>
+        <circle cx="27" cy="21" r="3" fill="#5C3A24"/>
+        <circle cx="37" cy="21" r="3" fill="#5C3A24"/>
+        <path d="M26 30 Q32 34 38 30" stroke="#5C3A24" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <h3>禾木赵默默</h3>
+      <p class="vlog-role">Vlog 博主 · 民宿主理人</p>
+      <p class="vlog-desc">在小红书记录禾木村的晨雾、冬雪、秋叶和夏花，分享木屋里的温暖日常。</p>
+      <div class="vlog-links">
+        <a href="https://www.xiaohongshu.com/search_result?keyword=默默禾你" target="_blank">默默禾你</a>
+        <a href="https://www.xiaohongshu.com/search_result?keyword=禾木溪闻民宿店" target="_blank">禾木溪闻民宿店</a>
+        <a href="https://www.xiaohongshu.com/search_result?keyword=白桦手礼" target="_blank">白桦手礼</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 联系 — SVG 图标 ====== -->
+<section class="contact" id="contact">
+  <h2 class="s-head">在禾木相遇</h2>
+  <div class="contact-row">
+    <div class="c-card">
+      <div class="c-icon-svg">
+        <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="14" width="24" height="20" rx="3" stroke="#C47E3B" stroke-width="1.5" fill="#FDF8F2"/><path d="M8 22 L20 12 L32 22" stroke="#C47E3B" stroke-width="1.5" fill="none"/></svg>
+      </div>
+      <h4>诺瓦木屋</h4>
+      <p>禾木老村 · 禾木桥旁</p>
+      <p class="c-soon">携程在线预订</p>
+    </div>
+    <div class="c-card">
+      <div class="c-icon-svg">
+        <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="16" width="24" height="16" rx="3" stroke="#8BA8C0" stroke-width="1.5" fill="#E8EEF4"/><path d="M8 24 L20 18 L32 24" stroke="#8BA8C0" stroke-width="1.5" fill="none"/></svg>
+      </div>
+      <h4>溪闻民宿</h4>
+      <p>禾木新村 · 溪水畔</p>
+      <p class="c-soon">携程在线预订</p>
+    </div>
+    <div class="c-card">
+      <div class="c-icon-svg">
+        <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="24" height="24" rx="6" stroke="#C47E3B" stroke-width="1.5" fill="#FDF8F2"/><text x="20" y="26" text-anchor="middle" font-size="12" fill="#C47E3B" font-family="serif">书</text></svg>
+      </div>
+      <h4>小红书</h4>
+      <p>默默禾你</p>
+      <p>禾木溪闻民宿店</p>
+      <p>白桦手礼</p>
+    </div>
+    <div class="c-card">
+      <div class="c-icon-svg">
+        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="16" r="4" stroke="#C47E3B" stroke-width="1.5" fill="#FDF8F2"/><path d="M12 34 C12 26 28 26 28 34" stroke="#C47E3B" stroke-width="1.5" fill="none"/></svg>
+      </div>
+      <h4>地址</h4>
+      <p>新疆阿勒泰地区</p>
+      <p>布尔津县 · 禾木村</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p class="f-time" id="footerTime">你在禾木的 00:00</p>
+  <p class="f-brand">默默禾你</p>
+  <p class="f-sub">诺瓦木屋 &amp; 禾木溪闻民宿</p>
+  <p class="f-copy">&copy; 2026 禾木赵默默</p>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
