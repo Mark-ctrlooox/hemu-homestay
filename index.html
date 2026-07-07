@@ -230,7 +230,7 @@
       <p class="vlog-role">Vlog 博主 · 民宿主理人</p>
       <p class="vlog-desc">在小红书记录禾木村的晨雾、冬雪、秋叶和夏花，分享木屋里的温暖日常。</p>
       <div class="vlog-links">
-        <a href="https://xhslink.com/m/6Nu6rVtJ6LI" target="_blank">默默禾你</a>
+    <a href="https://xhslink.com/m/6Nu6rVtJ6LI" target="_blank">默默禾你</a>
         <a href="https://xhslink.com/m/AX6jA6HWkQ9" target="_blank">禾木溪闻民宿店</a>
         <a href="https://xhslink.com/m/2HDNdCy2F3o" target="_blank">白桦手礼</a>
       </div>
@@ -287,6 +287,50 @@
 
 <!-- 回到顶部 -->
 <button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<!-- 分享按钮 -->
+<button class="share-float" id="shareFloat" aria-label="分享">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+</button>
+
+<!-- 分享面板 -->
+<div class="share-overlay" id="shareOverlay"></div>
+<div class="share-panel" id="sharePanel">
+  <button class="share-close" id="shareClose" aria-label="关闭">×</button>
+  <h3 class="share-title">分享给朋友</h3>
+  <p class="share-sub">把禾木的美好分享出去</p>
+  <div class="share-grid">
+    <div class="share-item" data-action="wechat-friend">
+      <div class="share-icon-svg" style="background:#07C160">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M8.5 11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5.8 9.2c-.5.2-.8.7-.8 1.3 0 .6.4 1.1.9 1.3l-.2 1.5 1.4-.8c.4.1.7.2 1.1.2.4 0 .8-.1 1.1-.2-.4-.8-.4-1.7 0-2.5-.4-.1-.8-.2-1.1-.2-.4 0-.8 0-1.2.2l-.6-.6-.6.8zm9.5 3.5c-.3 0-.7 0-1 .1v-.1c0-1.5-1.1-2.7-2.5-3-1-.2-1.9 0-2.7.6.2.8.2 1.6 0 2.5.3.1.7.2 1 .2.3 0 .7 0 1-.1.4.5 1.1.7 1.8.5l1.1.7-.1-1c.5-.3.9-.8.9-1.4.1-.5-.3-1-.8-1.2.2.1.5.2.6.2.3 0 .8 0 .8.4s-.3.5-.5.5h-.4l-.4.4.6.3c.3.1.5.4.5.7-.1.4-.4.6-.7.7h-.2z"/></svg>
+      </div>
+      <span>微信好友</span>
+    </div>
+    <div class="share-item" data-action="wechat-moments">
+      <div class="share-icon-svg" style="background:#07C160">
+        <svg viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+      </div>
+      <span>朋友圈</span>
+    </div>
+    <div class="share-item" data-action="copy">
+      <div class="share-icon-svg" style="background:#C47E3B">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      </div>
+      <span>复制链接</span>
+    </div>
+    <div class="share-item" data-action="native">
+      <div class="share-icon-svg" style="background:#8BA8C0">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </div>
+      <span>更多方式</span>
+    </div>
+  </div>
+  <div class="share-wechat-guide" id="shareWechatGuide" style="display:none">
+    <p>在微信中打开本页面</p>
+    <p>点击右上角 <strong>···</strong> 即可分享</p>
+  </div>
+  <div class="share-copied" id="shareCopied">✓ 链接已复制，去粘贴给朋友吧</div>
+</div>
 
 <script src="assets/js/main.js"></script>
 </body>

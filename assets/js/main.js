@@ -173,4 +173,153 @@
       ticking = true;
     }
   });
+
+  // ====== 10. SHARE PANEL ======
+  var shareFloat = document.getElementById('shareFloat');
+  var shareOverlay = document.getElementById('shareOverlay');
+  var sharePanel = document.getElementById('sharePanel');
+  var shareClose = document.getElementById('shareClose');
+  var shareCopied = document.getElementById('shareCopied');
+  var shareWechatGuide = document.getElementById('shareWechatGuide');
+  var shareOpen = false;
+  var pageUrl = window.location.href;
+  var pageTitle = document.title || '默默禾你 · 诺瓦木屋 & 禾木溪闻民宿';
+  var pageDesc = '新疆阿勒泰禾木村，推开木屋的门——外面是雪山白桦，里面是炉火温暖。';
+
+  function openShare() {
+    shareOpen = true;
+    sharePanel.classList.add('show');
+    shareOverlay.classList.add('show');
+    shareCopied.classList.remove('show');
+    document.body.style.overflow = 'hidden';
+
+    // Detect WeChat browser
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('micromessenger') !== -1) {
+      shareWechatGuide.style.display = 'block';
+    } else {
+      shareWechatGuide.style.display = 'none';
+    }
+  }
+
+  function closeShare() {
+    shareOpen = false;
+    sharePanel.classList.remove('show');
+    shareOverlay.classList.remove('show');
+    document.body.style.overflow = '';
+    shareCopied.classList.remove('show');
+  }
+
+  if (shareFloat) {
+    shareFloat.addEventListener('click', openShare);
+    shareFloat.addEventListener('touchend', function(e) { e.preventDefault(); openShare(); });
+  }
+  if (shareOverlay) shareOverlay.addEventListener('click', closeShare);
+  if (shareClose) shareClose.addEventListener('click', closeShare);
+
+  // Share actions
+  document.querySelectorAll('.share-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      var action = item.getAttribute('data-action');
+      switch (action) {
+        case 'copy':
+          copyLink();
+          break;
+        case 'native':
+          nativeShare();
+          break;
+        case 'wechat-friend':
+        case 'wechat-moments':
+          wechatShare(action);
+          break;
+      }
+    });
+    item.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      var action = item.getAttribute('data-action');
+      switch (action) {
+        case 'copy':
+          copyLink();
+          break;
+        case 'native':
+          nativeShare();
+          break;
+        case 'wechat-friend':
+        case 'wechat-moments':
+          wechatShare(action);
+          break;
+      }
+    });
+  });
+
+  function copyLink() {
+    try {
+      var textarea = document.createElement('textarea');
+      textarea.value = pageTitle + '\\n' + pageUrl;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      showCopied();
+    } catch (e) {
+      // Fallback for mobile
+      try {
+        navigator.clipboard.writeText(pageTitle + ' ' + pageUrl).then(showCopied);
+      } catch (e2) {
+        showCopied();
+      }
+    }
+  }
+
+  function nativeShare() {
+    if (navigator.share) {
+      navigator.share({
+        title: pageTitle,
+        text: pageDesc,
+        url: pageUrl
+      }).then(function() {
+        closeShare();
+      }).catch(function() {
+        // User cancelled
+      });
+    } else {
+      // Fallback: copy link
+      copyLink();
+    }
+  }
+
+  function wechatShare(action) {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('micromessenger') !== -1) {
+      // In WeChat, show guide
+      shareWechatGuide.style.display = 'block';
+      shareWechatGuide.querySelector('p:first-child').textContent =
+        action === 'wechat-moments' ? '点击右上角 ··· → 分享到朋友圈' : '点击右上角 ··· → 发送给朋友';
+    } else {
+      // Not in WeChat, copy link
+      copyLink();
+      setTimeout(function() {
+        shareCopied.textContent = '链接已复制，打开微信粘贴给好友即可';
+        shareCopied.classList.add('show');
+      }, 10);
+    }
+  }
+
+  function showCopied() {
+    shareCopied.textContent = '\u2713 链接已复制，去粘贴给朋友吧';
+    shareCopied.classList.add('show');
+    setTimeout(function() {
+      shareCopied.classList.remove('show');
+    }, 2500);
+  }
+
+  // Close share on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && shareOpen) {
+      closeShare();
+    }
+  });
+
 })();

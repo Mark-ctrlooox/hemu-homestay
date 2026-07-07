@@ -212,6 +212,42 @@ body{
 .back-top:hover{background:var(--amber);color:var(--white);border-color:var(--amber);transform:translateY(-3px);box-shadow:var(--shadow-btn)}
 .back-top:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 
+/* ====== SHARE FLOAT & PANEL ====== */
+.share-float{position:fixed;bottom:92px;right:32px;z-index:90;width:48px;height:48px;border-radius:50%;background:var(--white);border:1px solid rgba(var(--amber-rgb),0.2);box-shadow:var(--shadow-card);cursor:pointer;font-size:1rem;color:var(--amber);display:flex;align-items:center;justify-content:center;transition:all var(--ease)}
+.share-float:hover{background:var(--amber);color:var(--white);border-color:var(--amber);transform:translateY(-3px);box-shadow:var(--shadow-btn)}
+.share-float:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.share-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.4);opacity:0;pointer-events:none;transition:opacity 0.3s}
+.share-overlay.show{opacity:1;pointer-events:auto}
+.share-panel{position:fixed;bottom:0;left:0;right:0;z-index:201;background:var(--white);border-radius:20px 20px 0 0;padding:32px 28px 40px;transform:translateY(100%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);box-shadow:0 -8px 40px rgba(0,0,0,0.15);max-height:85vh;overflow-y:auto}
+.share-panel.show{transform:translateY(0)}
+.share-close{position:absolute;top:16px;right:20px;width:36px;height:36px;border-radius:50%;background:var(--cream);border:none;font-size:1.3rem;color:var(--text-muted);cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:all var(--ease)}
+.share-close:hover{background:rgba(var(--amber-rgb),0.1);color:var(--amber)}
+.share-title{font-family:"Noto Serif SC",serif;font-size:1.25rem;color:var(--bark-dark);text-align:center;margin-bottom:4px}
+.share-sub{text-align:center;font-size:0.8rem;color:var(--text-muted);margin-bottom:28px}
+.share-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:400px;margin:0 auto}
+.share-item{display:flex;flex-direction:column;align-items:center;gap:10px;cursor:pointer;padding:8px;border-radius:12px;transition:all var(--ease);border:none;background:none;font-family:inherit}
+.share-item:hover{background:rgba(var(--amber-rgb),0.04)}
+.share-item:active{transform:scale(0.95)}
+.share-icon-svg{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.share-icon-svg svg{width:26px;height:26px}
+.share-item span{font-size:0.73rem;color:var(--text-light);white-space:nowrap}
+.share-wechat-guide{text-align:center;margin-top:24px;padding:18px;background:var(--cream);border-radius:12px}
+.share-wechat-guide p{font-size:0.85rem;color:var(--text-light)}
+.share-wechat-guide strong{color:var(--amber);font-size:1.1rem}
+.share-copied{text-align:center;margin-top:20px;padding:12px;background:rgba(var(--amber-rgb),0.08);color:var(--amber-deep);border-radius:10px;font-size:0.82rem;opacity:0;transform:translateY(8px);transition:all 0.4s ease}
+.share-copied.show{opacity:1;transform:translateY(0)}
+
+/* Share responsive */
+@media(max-width:600px){
+  .share-float{bottom:76px;right:16px;width:42px;height:42px}
+  .share-grid{grid-template-columns:repeat(4,1fr);gap:10px}
+  .share-icon-svg{width:44px;height:44px}
+  .share-icon-svg svg{width:22px;height:22px}
+  .share-item span{font-size:0.68rem}
+  .share-panel{padding:24px 20px 36px;border-radius:16px 16px 0 0}
+  .back-top{bottom:20px;right:16px;width:38px;height:38px;font-size:1rem}
+}
+
 /* ====== FOOTER ====== */
 .footer{background:var(--bark-dark);color:rgba(var(--white-rgb),0.3);text-align:center;padding:50px 32px 30px}
 .f-time{font-family:"Noto Serif SC",serif;font-size:1.1rem;color:var(--amber-light);letter-spacing:0.08em;margin-bottom:16px;font-variant-numeric:tabular-nums}
